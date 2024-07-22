@@ -1,10 +1,4 @@
 "use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React from "react";
-import { AiFillBug } from "react-icons/ai";
-import classNames from "classnames";
-import { useSession } from "next-auth/react";
 import {
   Avatar,
   Box,
@@ -13,6 +7,11 @@ import {
   Flex,
   Text,
 } from "@radix-ui/themes";
+import classNames from "classnames";
+import { useSession } from "next-auth/react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { AiFillBug } from "react-icons/ai";
 
 const NavBar = () => {
   const currentPath = usePathname();
@@ -64,6 +63,7 @@ const NavBar = () => {
                     size={"2"}
                     radius="full"
                     className="cursor-pointer"
+                    referrerPolicy="no-referrer"
                   />
                 </DropdownMenu.Trigger>
                 <DropdownMenu.Content>
